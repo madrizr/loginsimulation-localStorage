@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LocarStorage</title>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="shortcut icon" href="assets/favicon.ico">
+</head>
+<body>
+	<section class="contenedor">
+			<form class="center col l7 s12">
+				<div class="section col s12">
+					<div class="row card-panel col l8 s12" style="padding-bottom: 20px;"> 
+						<h3>Iniciar sesion</h3>
+					<p class="center">Ingrasa tus datos de usuario</p>
+					<div class="input-field col s12">
+						<input id="usuario" type="email" placeholder="Ingrese email" class="validate" required>
+					</div>
+					<div class="col s12">
+						<input id="password" type="password" placeholder="Ingrese password" class="validate" required>
+					</div>
+					<div class="input-field col s12">
+						<a type="submit" class="btn btn-floating btn-large pulse" id="login"><i class="fas fa-check"></i></a>
+					</div>
+					</div>
+				</div>
+			</form>
+	</section>
+
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	if (localStorage.getItem("datos_de_usuario")) {
+		window.location.href = 'dasboard.html';}
+	document.getElementById('login').addEventListener("click", localStorageEjecutar);
+</script>
+</body>
+</html>
